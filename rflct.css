@@ -1,0 +1,189 @@
+html {
+	scroll-behavior: smooth;
+}
+body{
+	margin: 0px;
+	height: 100vh;
+
+	display:grid;
+	background-color: black;
+
+	color:white;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+    
+}
+
+.noScroll{
+	overflow-y: auto;
+	overflow-x: hidden; 
+	scroll-behavior: smooth;
+	-ms-overflow-style: none;
+}
+.noScroll::-webkit-scrollbar {
+    display: none;
+}
+
+/*===================MAIN====================*/
+
+.overlapContainer{
+/*	position: absolute;*/
+	margin: 0px;
+	margin-left: 100px;
+	display:inline-grid;
+	grid-template-rows: repeat(4,10%);
+	grid-template-columns: repeat(3,30%);
+}
+
+
+.weekOne{
+	padding: 20px;
+	/*background-color: rgba(255, 204, 204,0.4);
+	border-radius: 5%;*/
+	transform: rotate(7deg);
+
+	animation: weekOne 30s infinite;
+}
+@keyframes weekOne {
+	50% {transform:rotate(1deg);};
+}
+
+.weekTwo{
+	padding: 20px;
+	/*background-color: rgba(255, 230, 204,0.4);
+	border-radius: 5%;*/
+	transform: rotate(-3deg);	
+	animation: weekTwo 30s infinite;
+}
+@keyframes weekTwo {
+	50% {transform:rotate(1deg);};
+}
+
+.weekThree{
+	padding: 20px;
+	/*background-color: rgba(255, 255, 204,0.4);
+	border-radius: 5%;*/
+	transform: rotate(3deg);	
+	
+	animation: weekThree 30s infinite;
+}
+@keyframes weekThree {
+	50% {transform:rotate(1deg);};
+}
+ 
+.weekFour{
+	padding: 20px;
+	/*background-color: rgba(230, 255, 204,0.4);
+	border-radius: 5%;*/
+	transform: rotate(-5deg);
+	animation: weekFour 30s infinite;
+}
+@keyframes weekFour {
+	50% {transform:rotate(1deg);};
+}
+
+.weekFive{
+	padding: 20px;
+	/*background-color: rgba(204, 255, 204,0.4);
+	border-radius: 5%;*/
+	transform: rotate(4deg);
+	animation: weekFive 30s infinite;
+}
+@keyframes weekFive {
+	50% {transform:rotate(1deg);};
+}
+.weekSix{
+	padding: 20px;
+	/*background-color: rgba(204, 255, 230,0.4);
+	border-radius: 5%;*/
+	transform: rotate(-6deg);
+	animation: weekSix 30s infinite;
+}
+@keyframes weekSix {
+	50% {transform:rotate(1deg);};
+}
+.weekSeven{
+	padding: 20px;
+	/*background-color: rgba(204, 255, 255,0.4);
+	border-radius: 5%;*/
+	transform: rotate(2deg);
+	animation: weekSeven 30s infinite;
+}
+@keyframes weekSeven {
+	50% {transform:rotate(1deg);};
+}
+.weekEight{
+	padding: 20px;
+	/*background-color: rgba(204, 238, 255,0.4);
+	border-radius: 5%;*/
+	transform: rotate(-9deg);
+	animation: weekEight 30s infinite;
+}
+@keyframes weekEight {
+	50% {transform:rotate(1deg);};
+}
+.weekNine{
+	padding: 20px;
+	/*background-color: rgba(204, 217, 255,0.4);
+	border-radius: 5%;*/
+	transform: rotate(8deg);
+	animation: weekNine 30s infinite;
+}
+@keyframes weekNine {
+	50% {transform:rotate(1deg);};
+}
+.weekTen{
+	padding: 20px;
+	/*background-color: rgba(217, 204, 255,0.4);
+	border-radius: 5%;*/
+	transform: rotate(-4deg);
+	animation: weekTen 30s infinite;
+}
+@keyframes weekTen {
+	50% {transform:rotate(1deg);};
+}
+.weekEleven{
+	padding: 20px;
+	/*background-color: rgba(242, 204, 255,0.4);
+	border-radius: 5%;*/
+	transform: rotate(2deg);
+	animation: weekEleven 30s infinite;
+}
+@keyframes weekEleven {
+	50% {transform:rotate(5deg);};
+}
+.weekTwelve{
+	padding: 20px;
+	/*background-color: rgba(255, 204, 242,0.4);
+	border-radius: 5%;*/
+	transform: rotate(-6deg);
+	animation: weekTwelve 30s infinite;
+}
+@keyframes weekTwelve {
+	50% {transform:rotate(1deg);};
+}
+
+/*===================INFORMATION====================*/
+
+
+
+/*===================BACKGROUND====================*/
+h1.background{
+	top:0;
+	left:0;
+	z-index: -99;
+	margin: 0px;
+
+	font-weight: 100;
+	font-size: 20em;
+	letter-spacing: 25px;
+	line-height: 100px;
+	width: 1vh;
+
+	animation: bg 20s infinite;
+}
+@keyframes bg {
+	50% {transform:skew(5deg);};
+}
+
+
