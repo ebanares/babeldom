@@ -10,8 +10,22 @@ body{
 
 	color:white;
 	text-align: center;
-	font-family: 'Roboto', sans-serif;
-    
+	font-family: 'Roboto', sans-serif;   
+
+	text-shadow:1px 1px 2px black;
+}
+img {
+    image-orientation: from-image;
+    box-shadow:1px 1px 2px black;
+}
+a{	
+	color: white;
+}
+a:hover{
+	font-weight: bold;
+}
+a:visited{
+	color:#9999;
 }
 
 .noScroll{
@@ -24,17 +38,119 @@ body{
     display: none;
 }
 
+/*===================IMAGE====================*/
+
+/*Code used to create Modal Images is adapted from 
+https://www.w3schools.com/howto/howto_css_modal_images.asp*/
+
+/* Style the Image Used to Trigger the Modal */
+.myImg {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.myImg:hover {opacity: 0.7;}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-height: 80%;
+  max-width: 80%;
+}
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
 /*===================MAIN====================*/
+.info{
+	margin:auto;
+	max-width:50%;
+}
+.caption{
+	font-size: 0.75em;
+	color:white;
+	font-weight:300;
+	font-style: italic;
+}
+.dividers{
+	margin-top:300px;
+	font-weight: 100;
+	font-size: 3em;
+	letter-spacing: 25px;
+}
 
 .overlapContainer{
 /*	position: absolute;*/
 	margin: 0px;
 	margin-left: 100px;
 	display:inline-grid;
-	grid-template-rows: repeat(4,10%);
+	grid-template-rows: repeat(5,20%);
 	grid-template-columns: repeat(3,30%);
+	column-gap: 10px;
+	height:2700px;
 }
-
+.overlapContainer.pieces{
+/*	position: absolute;*/
+	margin: 0px;
+	margin-left: 100px;
+	margin-bottom: 100px;
+	display:inline-grid;
+	grid-template-rows: repeat(5,40%);
+	grid-template-columns: repeat(3,30%);
+	column-gap: 10px;
+	height:800px;
+}
 
 .weekOne{
 	padding: 20px;
@@ -162,7 +278,36 @@ body{
 @keyframes weekTwelve {
 	50% {transform:rotate(1deg);};
 }
-
+.weekThirteen{
+	padding: 20px;
+	/*background-color: rgba(255, 204, 242,0.4);
+	border-radius: 5%;*/
+	transform: rotate(-5deg);
+	animation: weekThirteen 30s infinite;
+}
+@keyframes weekThirteen {
+	50% {transform:rotate(1deg);};
+}
+.twoD.one{
+	padding: 20px;
+	transform: rotate(8deg);
+	animation: weekOne 30s infinite;
+}
+.threeD.one{
+	padding: 20px;
+	transform: rotate(-6deg);
+	animation: weekSeven 30s infinite;
+}
+.fourD.one{
+	padding: 20px;
+	transform: rotate(5deg);
+	animation: weekTen 30s infinite;
+}
+.expD.one{
+	padding: 20px;
+	transform: rotate(-7deg);
+	animation: weekEleven 30s infinite;
+}
 /*===================INFORMATION====================*/
 
 
@@ -186,4 +331,18 @@ h1.background{
 	50% {transform:skew(5deg);};
 }
 
+/*-credits-*/
+.sidebar{
+	position: fixed;
+	right:50px;
+	bottom:30px;
+	z-index: 99;
+
+	font-size: 0.75em;
+	color:#999999;
+	font-weight:300;
+	font-style: italic;
+	text-align: right;
+	line-height: 8px;
+}
 
